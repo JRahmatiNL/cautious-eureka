@@ -21,3 +21,9 @@ steps:
   inputs:
     gitHubConnection: 'toivootspere'
     repositoryName: '$(Build.Repository.Name)'
+- task: AppCenterTest@1
+  inputs:
+    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
+    frameworkOption: 'appium'
+    credentialsOption: 'serviceEndpoint'
+    localeOption: 'en_US'
