@@ -24,3 +24,9 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
+    - task: PowerShellOnTargetMachines@3
+      inputs:
+        InlineScript: |
+          # Write your powershell commands here.
+          
+          Write-Output "Hello World"
